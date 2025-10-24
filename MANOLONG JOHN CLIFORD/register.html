@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Cebu | Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    background: url("CEBU IMG.jpg") no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .register-container {
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .register-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .register-container label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .register-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #000;
+  }
+
+  .register-container input:focus {
+    outline: 2px solid #ffb300;
+  }
+
+  .btn {
+    background: #ffb300;
+    color: #000;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+  }
+
+  .btn:hover {
+    background: #ffd166;
+  }
+
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ddd;
+  }
+
+  .login-link a {
+    color: #ffb300;
+    text-decoration: none;
+  }
+
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+
+  .error {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ffb3b3;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .register-container {
+      width: 90%;
+      padding: 30px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="register-container">
+    <h2>Register</h2>
+
+    <form method="post" action="register.php">
+      
+
+      <label>Username</label>
+      <input type="text" name="username">
+
+      <label>Email</label>
+      <input type="email" name="email" >
+
+      <label>Password</label>
+      <input type="password" name="password_1">
+
+      <label>Confirm Password</label>
+      <input type="password" name="password_2">
+
+      <button type="submit" class="btn" name="reg_user">Register</button>
+
+      <div class="login-link">
+        Already have an account? <a href="login.html">Login here</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

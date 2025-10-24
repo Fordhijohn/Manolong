@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Travel Cebu</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    background: #f8f8f8;
+    color: #333;
+  }
+
+ header {
+    background: rgba(34, 34, 34, 0.9);
+    color: #fff;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+  }
+
+
+
+  .logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 400;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffb300;
+  }
+
+  .contact-section {
+    padding: 100px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .contact-text {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .contact-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .contact-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .contact-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+  }
+
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover {
+    background: #ffb300;
+    color: #222;
+  }
+
+  footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    .contact-section {
+      flex-direction: column;
+      padding: 60px 30px;
+    }
+
+    .contact-form {
+      padding: 30px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">TRAVEL CEBU</div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="login.html">LOGIN</a>
+      <a href="register.html">REGISTER</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-text">
+      <h1>Contact Us</h1>
+      <p>
+        Have questions about your next adventure in Cebu?  
+        Fill out the form or reach us through the details below.  
+        We’re here to help you plan the perfect getaway.
+      </p>
+
+      <div class="contact-info">
+        <p><strong>📍 Address:</strong> Cebu City, Philippines</p>
+        <p><strong>📧 Email:</strong> travelcebu@gmail.com</p>
+        <p><strong>📞 Phone:</strong> +63 9658639599</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Travel Cebu | All Rights Reserved
+  </footer>
+</body>
+</html>

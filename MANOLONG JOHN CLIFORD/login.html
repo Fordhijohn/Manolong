@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Travel Cebu</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    background: url("CEBU IMG.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+  }
+
+  /* Overlay background */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+  }
+
+  /* Login container must be above overlay */
+  .login-container {
+    position: relative;  /* important */
+    z-index: 1;          /* makes clickable */
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .login-container h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .login-container label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255,255,255,0.85);
+    color: #000;
+    font-size: 14px;
+  }
+
+  .btn {
+    background: #ffb300;
+    color: #000;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+  }
+
+  .btn:hover {
+    background: #ffd166;
+  }
+
+  .error {
+    background: rgba(255, 0, 0, 0.3);
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: #ffb3b3;
+    font-size: 14px;
+  }
+
+  a {
+    color: #ffb300;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .extra-links {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ddd;
+  }
+</style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+
+    <?php include('errors.php'); ?>
+
+    <form method="post" action="login.php">
+      <label>Username or Email</label>
+      <input type="text" name="username" required>
+
+      <label>Password</label>
+      <input type="password" name="password" required>
+
+      <button type="submit" class="btn" name="login_user">Login</button>
+    </form>
+
+    <div class="extra-links">
+      <p>Don’t have an account? <a href="register.html">Register here</a></p>
+      <p>Back to <a href="index.html">Home</a></p>
+    </div>
+  </div>
+</body>
+</html>
